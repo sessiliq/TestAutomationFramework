@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SuccessfulLogin {
+public class Login {
     //variable type WebDriver
     public WebDriver driver;
 
@@ -18,8 +19,11 @@ public class SuccessfulLogin {
     //method for setting the web driver
     public void setupDriver(){
         //set for chrome
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+       // WebDriverManager.chromedriver().setup();
+       // driver = new ChromeDriver();
+
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
     }
 
     //annotation Test - for the particular test
@@ -50,5 +54,27 @@ public class SuccessfulLogin {
         //We use assertions to validate if test passed or failed
         //Assertions are given by TestNG
         Assert.assertTrue(productTittle.isDisplayed());
+    }
+
+    @Test
+    public void unsuccessfulLogin(){
+        driver.get("https://www.abv.bg");
+
+        WebElement abvUserInput = driver.findElement(By.id("username"));
+        abvUserInput.click();
+        abvUserInput.clear();
+        abvUserInput.sendKeys("test");
+
+        WebElement passwordInput = driver.findElement(By.id("password"));
+        passwordInput.click();
+        passwordInput.clear();
+        passwordInput.sendKeys("test");
+
+        WebElement loginBtn = driver.findElement(By.id("loginBut"));
+        loginBtn.click();
+
+        WebElement errorMessage = driver.findElement(By.id("form.errors"));
+
+        Assert.assertTrue(errorMessage.isDisplayed());
     }
 }
