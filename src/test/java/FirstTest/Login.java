@@ -7,33 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Login {
-    //variable type WebDriver
-    public WebDriver driver;
-
-    //annotation before method is executed before any other
-    @BeforeMethod
-    //method for setting the web driver
-    public void setupDriver(){
-        //set for chrome
-       // WebDriverManager.chromedriver().setup();
-       // driver = new ChromeDriver();
-
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
-    }
-
+public class Login extends TestUtil{
+    //When we use Test annotation we don't need Main method. Entry point is given after the annotation
     //annotation Test - for the particular test
     @Test
     //method for particular test
     public void successfulLogin(){
-        //get the url of the page we want to test
-        driver.get("https://www.saucedemo.com");
-
-        //create variables for different fields and buttons
+       //create variables for different fields and buttons
         //variable for field username
         WebElement userNameInput = driver.findElement(By.id("user-name"));
         //actions we do with the found element
