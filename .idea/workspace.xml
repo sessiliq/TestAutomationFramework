@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0766a6d-adb8-4c3a-96b1-b2d799b2d679" name="Changes" comment="first automated test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FirstTest/ProductTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FirstTest/TestUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstTest/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstTest/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.SuccessfulLogin.unsuccessfulLogin">
+  <component name="RunManager" selected="TestNG.ProductTest.AddProductToCart">
     <configuration name="Login.successfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestAutomationFramework" />
       <extension name="coverage">
@@ -91,8 +89,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductTest.AddProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FirstTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="FirstTest" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest.ProductTest" />
+      <option name="METHOD_NAME" value="AddProductToCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductTest.AddProductToCart" />
         <item itemvalue="TestNG.SuccessfulLogin.unsuccessfulLogin" />
         <item itemvalue="TestNG.SuccessfulLogin.successfulLogin" />
       </list>
@@ -163,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703608504954</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="first automated test">
+      <created>1703784644020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703784644020</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
